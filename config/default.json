@@ -1,6 +1,6 @@
 {
-  "domain": "wp-framework.dev",
-  "theme": "wp-framework",
+  "domain": "waycon.local",
+  "theme": "wp-waycon",
   "path": {
     "base": {
       "src":"assets/",
