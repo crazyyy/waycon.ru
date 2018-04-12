@@ -1,69 +1,24 @@
-<!doctype html>
-<html <?php language_attributes(); ?> class="no-js">
-<head>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#ffffff">
-
-  <title><?php wp_title( '' ); ?><?php if ( wp_title( '', false ) ) { echo ' :'; } ?> <?php bloginfo( 'name' ); ?></title>
-
-  <link href="http://www.google-analytics.com/" rel="dns-prefetch"><!-- dns prefetch -->
-
-  <!-- icons -->
-  <link href="<?php echo get_template_directory_uri(); ?>/favicon.ico" rel="shortcut icon">
-
-  <!--[if lt IE 9]>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/selectivizr/1.0.2/selectivizr-min.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
-  <![endif]-->
-  <!-- css + javascript -->
-
-  <link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/css/c3d18804be-b7efb3cb0c0e58c25f6043f6e8ded62d.css" media="all">
-  <link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/css/d6904c8020-85a4957dfa059a513f70afd7ac3ce53d.css" media="all">
-  <link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/css/merged-7c572848d257c0492204f32cee00a4ba-69ebcf6d2e4f11da25f5c7df3d3a1fe1.css" media="all">
-  <link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/css/merged-18fe91ea8021281bedd3af0805929b78-022c2c051bf34a7c23fa5ca1ddb3be98.css" media="print">
-  <link href="https://fonts.googleapis.com/css?family=Ubuntu:300,300i,400,400i,500,500i,700,700i&amp;subset=cyrillic,cyrillic-ext" rel="stylesheet">
-
-  <?php wp_head(); ?>
-</head>
+  <?php get_header(); ?>
 
 
-<body id="var1">
-  <div id="inhalt">
-    <div id="oben">
-      <a id="c3066"></a>
-      <div id="c3065" class="csc cea7  op1 wvp sptop0 spbottom0">
-        <div class="ce">
-          <div class="ce0">
-            <div class="csc-textpic csc-textpic-center csc-textpic-above">
-              <div class="csc-textpic-imagewrap" style="width:100%;" data-csc-images="1" data-csc-cols="1">
-                <div class="csc-textpic-imagerow">
-                  <figure class="csc-textpic-image"><img src="<?php echo get_template_directory_uri(); ?>/img/logo.png" alt="<?php wp_title( '' ); ?>" title="<?php wp_title( '' ); ?>" class="logo-img"></figure>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
     <div id="spalten">
       <div id="normal">
-        <a id="c575"></a>
         <div id="c4" class="csc cea7  style1 op0 spbottom0">
           <div class="ce">
             <div class="ce0">
               <div class="csc-header csc-header-n1">
                 <h1 class="csc-firstHeader">Company</h1></div>
               <div class="csc-textpic-text" style="width:100%;">
-                <p>We have been developing and manufacturing precision sensors for position and distance measurement since 1999. As an innovative company with headquarters in Taufkirchen near Munich and a branch in Brühl near Cologne, we sell our products all over the world, and we currently have direct points of contact at distributors in over 20 countries.
-                </p>
-                <p>Our goal is to provide our customers with the best possible measurement technique solution. This is why we develop and produce sensors with a wide range of specifications for various applications in industry and research. Our product range includes both premium sensors and custom solutions, from prototype to series production. Products made in Taufkirchen are subject to rigorous quality standards and every single one is delivered to our customers with a calibration certificate.</p>
+<p>We have been developing and manufacturing precision sensors for position and distance measurement since 1999. As an innovative company with headquarters in Taufkirchen near Munich and a branch in Brühl near Cologne, we sell our products all over the world, and we currently have direct points of contact at distributors in over 20 countries.
+</p>
+<p>Our goal is to provide our customers with the best possible measurement technique solution. This is why we develop and produce sensors with a wide range of specifications for various applications in industry and research. Our product range includes both premium sensors and custom solutions, from prototype to series production. Products made in Taufkirchen are subject to rigorous quality standards and every single one is delivered to our customers with a calibration certificate.</p>
               </div>
             </div>
           </div>
         </div>
       </div>
+
+
       <div id="links">
         <!--TYPO3SEARCH_end-->
         <div class="ebene1"><a href="https://www.waycon.biz/company/">Company</a></div>
@@ -106,7 +61,7 @@
   <div id="fixo">
     <div id="fixo0">
       <div class="schildwrap">
-        <a href="https://www.waycon.biz/" target="_top" class="schild"><img src="img/schild.png" alt=""></a>
+        <a href="https://www.waycon.biz/" target="_top" class="schild"><img src="<?php echo get_template_directory_uri(); ?>/img/schild.png" alt=""></a>
       </div>
       <div id="abovemenu"><span class="sprachmenue noprint"><span class="inactive"><a href="https://www.waycon.de/unternehmen/">DE</a></span><span class="active"><a href="https://www.waycon.biz/company/">EN</a></span><span class="inactive"><a href="https://www.waycon.es/negocio/">ES</a></span></span>
         <form action="https://www.waycon.biz/search/" class="noprint" method="post" id="suche">
@@ -298,9 +253,9 @@
           </div>
         </div>
         <div id="socialmediaicons">
-          <a href="http://www.facebook.com/wayconpositionsmesstechnik" class="facebook" target="_blank" title="WayCon on Facebook"><img src="img/facebook.png" alt="WayCon on Facebook"></a>
-          <a href="http://www.twitter.com/Waycon_Sensor" class="twitter" target="_blank" title="WayCon on Twitter"><img src="img/twitter.png" alt="WayCon on Twitter"></a>
-          <a href="http://www.youtube.com/channel/UCfNsizKHRFQNZA8WcE16eoQ" class="youtube" target="_blank" title="WayCon on YouTube"><img src="img/youtube.png" alt="WayCon on YouTube"></a>
+          <a href="http://www.facebook.com/wayconpositionsmesstechnik" class="facebook" target="_blank" title="WayCon on Facebook"><img src="<?php echo get_template_directory_uri(); ?>/img/facebook.png" alt="WayCon on Facebook"></a>
+          <a href="http://www.twitter.com/Waycon_Sensor" class="twitter" target="_blank" title="WayCon on Twitter"><img src="<?php echo get_template_directory_uri(); ?>/img/twitter.png" alt="WayCon on Twitter"></a>
+          <a href="http://www.youtube.com/channel/UCfNsizKHRFQNZA8WcE16eoQ" class="youtube" target="_blank" title="WayCon on YouTube"><img src="<?php echo get_template_directory_uri(); ?>/img/youtube.png" alt="WayCon on YouTube"></a>
         </div>
       </div>
       <div id="untenre">
@@ -311,7 +266,7 @@
                 <div class="csc-textpic-imagewrap" style="width:100%;" data-csc-images="1" data-csc-cols="1">
                   <div class="csc-textpic-imagerow">
                     <figure class="csc-textpic-image">
-                      <a href="https://www.waycon.biz/"><img src="img/schild_unten.png" alt=""></a>
+                      <a href="https://www.waycon.biz/"><img src="<?php echo get_template_directory_uri(); ?>/img/schild_unten.png" alt=""></a>
                     </figure>
                   </div>
                 </div>
@@ -329,10 +284,11 @@
       </div>
     </div>
   </div>
-  <script src="js/merged-ccf0a3d4ed0a537364dfccaa6688d7f0-b3eaeac990c9b2e80fa311493738bca8.js" type="text/javascript"></script>
-  <script src="js/merged-dfde0cd6fb1fb1bffde440c83c436ef3-49796c44474f75a76c60c4cb8fd31c73.js" type="text/javascript"></script>
-  <script src="js/merged-7c1c704dfa1a99ba4b09ffcfd0f35b19-0cc29dd197451ab7a885897042ae4013.js" type="text/javascript"></script>
-  <script src="js/merged-9319a80be32ba03da57c027ba301af92-d11ded322786ab673e71dcc81402fa68.js" type="text/javascript"></script>
+  <script src="<?php echo get_template_directory_uri(); ?>/js/jquery-and-other.js" type="text/javascript"></script>
+  <script src="<?php echo get_template_directory_uri(); ?>/js/nivoslider.js" type="text/javascript"></script>
+  <script src="<?php echo get_template_directory_uri(); ?>/js/magnific.js" type="text/javascript"></script>
+  <script src="<?php echo get_template_directory_uri(); ?>/js/mobile.js" type="text/javascript"></script>
+  <script src="<?php echo get_template_directory_uri(); ?>/js/gallery.js" type="text/javascript"></script>
 </body>
 
 </html>

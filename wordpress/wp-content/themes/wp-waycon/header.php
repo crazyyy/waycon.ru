@@ -1,9 +1,9 @@
 <!doctype html>
 <html <?php language_attributes(); ?> class="no-js">
 <head>
-  <meta charset="<?php bloginfo( 'charset' ); ?>">
-  <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#ffffff">
 
   <title><?php wp_title( '' ); ?><?php if ( wp_title( '', false ) ) { echo ' :'; } ?> <?php bloginfo( 'name' ); ?></title>
 
@@ -18,30 +18,28 @@
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
   <![endif]-->
   <!-- css + javascript -->
+
   <?php wp_head(); ?>
+  <link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/css/print.css" media="print">
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu:300,300i,400,400i,500,500i,700,700i&amp;subset=cyrillic,cyrillic-ext" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+
 </head>
-<body <?php body_class(); ?>>
-<!-- wrapper -->
-<div class="wrapper">
-  <header role="banner">
-    <div class="inner">
-
-      <div class="logo">
-        <?php if ( !is_front_page() && !is_home() ){ ?>
-          <a href="<?php echo home_url(); ?>">
-        <?php } ?>
-            <img src="<?php echo get_template_directory_uri(); ?>/img/logo.png" alt="<?php wp_title( '' ); ?>" title="<?php wp_title( '' ); ?>" class="logo-img">
-        <?php if ( !is_front_page() && !is_home() ){ ?>
-          </a>
-        <?php } ?>
-      </div><!-- /logo -->
-
-      <nav class="nav" role="navigation">
-        <?php wpeHeadNav(); ?>
-      </nav><!-- /nav -->
-
-    </div><!-- /.inner -->
-  </header><!-- /header -->
-
-  <section role="main">
-    <div class="inner">
+<body id="var1">
+  <div id="inhalt">
+    <div id="oben">
+      <a id="c3066"></a>
+      <div id="c3065" class="csc cea7  op1 wvp sptop0 spbottom0">
+        <div class="ce">
+          <div class="ce0">
+            <div class="csc-textpic csc-textpic-center csc-textpic-above">
+              <div class="csc-textpic-imagewrap" style="width:100%;" data-csc-images="1" data-csc-cols="1">
+                <div class="csc-textpic-imagerow">
+                  <figure class="csc-textpic-image"><img src="<?php echo get_template_directory_uri(); ?>/img/company-waycon-.jpg" alt="<?php wp_title( '' ); ?>" title="<?php wp_title( '' ); ?>" class="logo-img"></figure>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
