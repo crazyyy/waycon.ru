@@ -25,21 +25,8 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
 
 </head>
-<body id="var1">
-  <div id="inhalt">
-    <div id="oben">
-      <a id="c3066"></a>
-      <div id="c3065" class="csc cea7  op1 wvp sptop0 spbottom0">
-        <div class="ce">
-          <div class="ce0">
-            <div class="csc-textpic csc-textpic-center csc-textpic-above">
-              <div class="csc-textpic-imagewrap" style="width:100%;" data-csc-images="1" data-csc-cols="1">
-                <div class="csc-textpic-imagerow">
-                  <figure class="csc-textpic-image"><img src="<?php echo get_template_directory_uri(); ?>/img/company-waycon-.jpg" alt="<?php wp_title( '' ); ?>" title="<?php wp_title( '' ); ?>" class="logo-img"></figure>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+<?php if ( is_page_template('front-page.php') ) {
+  echo '<body id="var3">';
+} else {
+  echo '<body id="var1">';
+} ?>

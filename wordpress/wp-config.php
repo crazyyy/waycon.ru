@@ -5,6 +5,8 @@ define('DB_PASSWORD', 'waycon');
 
 define('DB_HOST', 'localhost');
 
+define('ALLOW_UNFILTERED_UPLOADS', true);
+
 define('DISABLE_WP_CRON', true);
 define('FS_METHOD', 'direct');
 

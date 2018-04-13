@@ -46,3 +46,26 @@ if (typeof jQuery === "undefined") {
   console.log("jQuery " + jQuery.fn.jquery + " has loaded")
 }
 // Place any jQuery/helper plugins in here.
+jQuery(document).ready(function() {
+  jQuery('.tx-imagecycle-pi3').show();
+});
+jQuery(window).load(function() {
+  jQuery('#imagecycle-nivo_c897 img').removeAttr("height").removeAttr("width");
+  jQuery('#imagecycle-nivo_c897').nivoSlider({
+    effect: 'fade',
+    prevText: 'prev',
+    nextText: 'next',
+    slices: 1,
+    boxCols: 8,
+    boxRows: 4,
+    animSpeed: 500,
+    pauseTime: 3000,
+    captionOpacity: '0.70',
+    directionNav: true,
+    directionNavHide: true,
+    controlNav: false,
+    keyboardNav: true,
+    pauseOnHover: true,
+    manualAdvance: false
+  });
+});

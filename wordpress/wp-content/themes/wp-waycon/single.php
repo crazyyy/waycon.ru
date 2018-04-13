@@ -1,34 +1,56 @@
-<?php get_header(); ?>
-
+  <?php get_header(); ?>
   <?php if (have_posts()): while (have_posts()) : the_post(); ?>
-    <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+    <div id="inhalt">
+      <div id="oben">
+        <div class="csc cea7 op1 wvp sptop0 spbottom0">
+          <div class="ce">
+            <div class="ce0">
+              <?php $image = get_field('image'); if( $image ) { ?>
+              <div class="csc-textpic-imagewrap" style="width:100%;" data-csc-images="1" data-csc-cols="1">
+                <div class="csc-textpic-imagerow">
+                  <figure class="csc-textpic-image">
+                    <img src="<?php echo $image['url']; ?>" alt="<?php the_title(); ?>" title="<?php the_title(); ?>">
+                  </figure>
+                </div>
+              </div>
+              <?php } else { ?>
+                <div class="csc-header csc-header-n1 csc-header--centered"><h1 class="csc-firstHeader"><?php the_title(); ?></h1></div>
+              <?php } ?>
+            </div>
+          </div>
+        </div>
+      </div>
 
-      <h1 class="single-title inner-title"><?php the_title(); ?></h1>
-      <?php if ( has_post_thumbnail()) :?>
-        <a class="single-thumb" href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
-          <?php the_post_thumbnail(); // Fullsize image for the single post ?>
-        </a>
-      <?php endif; ?><!-- /post thumbnail -->
+      <div id="spalten">
+        <div id="normal">
+          <div id="post-<?php the_ID(); ?>" class="csc cea7 boxsingle style1 op1 spbottom0 saitobaza-box">
+            <div class="ce">
+              <div class="ce0">
+                <?php if( $image ) { ?>
+                  <div class="csc-header csc-header-n1"><h1 class="csc-firstHeader"><?php the_title(); ?></h1></div>
+                <?php } ?>
 
-      <span class="date"><?php the_time('d F Y'); ?> <?php the_time('H:i'); ?></span>
-      <span class="author"><?php _e( 'Published by', 'wpeasy' ); ?> <?php the_author_posts_link(); ?></span>
-      <span class="comments"><?php comments_popup_link( __( 'Leave your thoughts', 'wpeasy' ), __( '1 Comment', 'wpeasy' ), __( '% Comments', 'wpeasy' )); ?></span><!-- /post details -->
+                  <div class="csc-textpic-text" style="width:100%;">
+                    <a rel="nofollow" class="feature-img" href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
+                      <?php if ( has_post_thumbnail()) { ?>
+                        <img src="<?php echo the_post_thumbnail_url('medium'); ?>" title="<?php the_title(); ?>" alt="<?php the_title(); ?>" />
+                      <?php } ?>
+                    </a><!-- /post thumbnail -->
+                    <?php the_content(); ?>
 
-      <?php the_content(); ?>
+                    <?php edit_post_link(); ?>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <?php get_sidebar(); ?>
+      </div><!-- spalten -->
 
-      <?php the_tags( __( 'Tags: ', 'wpeasy' ), ', ', '<br>'); // Separated by commas with a line break at the end ?>
-
-      <p><?php _e( 'Categorised in: ', 'wpeasy' ); the_category(', '); // Separated by commas ?></p>
-
-      <p><?php _e( 'This post was written by ', 'wpeasy' ); the_author(); ?></p>
-
-      <?php edit_post_link(); ?>
-
-      <?php comments_template(); ?>
-
-    </article>
+      <div class="clear">&nbsp;</div>
+    </div>
   <?php endwhile; endif; ?>
 
-  <?php get_sidebar(); ?>
+  <?php include(TEMPLATEPATH.'/include-header.php'); ?>
 
 <?php get_footer(); ?>

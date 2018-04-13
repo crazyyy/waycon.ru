@@ -60,10 +60,10 @@ function wpeHeaderScripts() {
     //  Load footer scripts (footer.php)
     wp_register_script('wpeScripts', get_template_directory_uri() . '/js/scripts.js', array(), '1.0.0', true);
     wp_enqueue_script('wpeScripts');
-    wp_localize_script( 'wpeScripts', 'adminAjax', array( 
-      'ajaxurl' => admin_url( 'admin-ajax.php' ), 
-      'templatePath' => get_template_directory_uri(), 
-      'posts_per_page' => get_option('posts_per_page') 
+    wp_localize_script( 'wpeScripts', 'adminAjax', array(
+      'ajaxurl' => admin_url( 'admin-ajax.php' ),
+      'templatePath' => get_template_directory_uri(),
+      'posts_per_page' => get_option('posts_per_page')
     ));
 
   }
@@ -122,7 +122,7 @@ function wpeHeadNav() {
     'after'           => '',
     'link_before'     => '',
     'link_after'      => '',
-    'items_wrap'      => '<ul class="headnav">%3$s</ul>',
+    'items_wrap'      => '<ul id="menuequer" class="subpages">%3$s</ul>',
     'depth'           => 0,
     'walker'          => ''
     )
@@ -145,7 +145,29 @@ function wpeFootNav() {
     'after'           => '',
     'link_before'     => '',
     'link_after'      => '',
-    'items_wrap'      => '<ul class="footernav">%3$s</ul>',
+    'items_wrap'      => '<ul id="untenmenue">%3$s</ul>',
+    'depth'           => 0,
+    'walker'          => ''
+    )
+  );
+}
+function wpeFootNav2() {
+  wp_nav_menu(
+  array(
+    'theme_location'  => 'footer-menu-2',
+    'menu'            => '',
+    'container'       => 'div',
+    'container_class' => 'menu-{menu slug}-container',
+    'container_id'    => '',
+    'menu_class'      => 'menu',
+    'menu_id'         => '',
+    'echo'            => true,
+    'fallback_cb'     => 'wp_page_menu',
+    'before'          => '',
+    'after'           => '',
+    'link_before'     => '',
+    'link_after'      => '',
+    'items_wrap'      => '<ul id="meta" class="noprint">%3$s</ul>',
     'depth'           => 0,
     'walker'          => ''
     )
@@ -168,7 +190,7 @@ function wpeSideNav() {
     'after'           => '',
     'link_before'     => '',
     'link_after'      => '',
-    'items_wrap'      => '<ul class="sidebarnav">%3$s</ul>',
+    'items_wrap'      => '<ul id="menuehoch">%3$s</ul>',
     'depth'           => 0,
     'walker'          => ''
     )
@@ -180,7 +202,8 @@ function register_html5_menu() {
   register_nav_menus(array(
     'header-menu' => __('Меню в шапке', 'wpeasy'),
     'sidebar-menu' => __('Меню в сайдбар', 'wpeasy'),
-    'footer-menu' => __('Меню в подвал', 'wpeasy')
+    'footer-menu' => __('Меню в подвал', 'wpeasy'),
+    'footer-menu-2' => __('Меню в подвал 2', 'wpeasy')
   ));
 }
 //  If Dynamic Sidebar Existsов
@@ -686,6 +709,76 @@ function disable_emojicons_tinymce( $plugins ) {
   } else {
     return array();
   }
+}
+
+// Add news Post Type
+add_action( 'init', 'post_type_product' );
+function post_type_product() {
+
+  $labels = array(
+    'name'=> 'Продукция',
+    'singular_name' => 'Продукция',
+    'add_new' => 'Add',
+    'add_new_item' => 'Add',
+    'edit' => 'Edit',
+    'edit_item' => 'Edit',
+    'new-item' => 'Add',
+    'view' => 'View',
+    'view_item' => 'View',
+    'search_items' => 'Search',
+    'not_found' => 'Not Found',
+    'not_found_in_trash' => 'Not Found',
+    'parent' => 'Parent',
+  );
+
+  $args = array(
+    'labels' => $labels,
+    'description' => 'Product Post Type',
+    'public' => true,
+    'exclude_from_search' => true,
+    'show_ui' => true,
+    'menu_position' => 3,
+    // https://developer.wordpress.org/resource/dashicons/
+    'menu_icon' => 'dashicons-cart',
+    'capability_type' => 'post',
+    'hierarchical' => false,
+    'supports' => array('title','editor','thumbnail'),
+    'rewrite' => array( 'slug' => 'product' ),
+    'show_in_rest' => true
+  );
+
+  register_post_type( 'product' , $args );
+}
+
+
+// hook into the init action and call create_book_taxonomies when it fires
+add_action( 'init', 'taxonomies_category', 0 );
+function taxonomies_category() {
+  // Add new taxonomy, make it hierarchical (like categories)
+  $labels = array(
+    'name'              => 'Categories',
+    'singular_name'     => 'Category',
+    'search_items'      => 'Search',
+    'all_items'         => 'All',
+    'parent_item'       => 'Parent',
+    'parent_item_colon' => 'Parent',
+    'edit_item'         => 'Edit',
+    'update_item'       => 'Update',
+    'add_new_item'      => 'Add',
+    'new_item_name'     => 'Add',
+    'menu_name'         => 'Categories',
+  );
+
+  $args = array(
+    'hierarchical'      => true,
+    'labels'            => $labels,
+    'show_ui'           => true,
+    'show_admin_column' => true,
+    'query_var'         => true,
+    'rewrite'           => array( 'slug' => 'c' ),
+  );
+
+  register_taxonomy( 'c', array( 'product' ), $args );
 }
 
 ?>
