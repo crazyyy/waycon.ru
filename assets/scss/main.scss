@@ -10766,3 +10766,13 @@ a.buttonlook,
   height: auto;
   margin: 0;
 }
+.acf-map {
+  width: 100%;
+  height: 400px;
+  margin: 0;
+
+  border: #cccccc solid 1px;
+  img {
+    max-width: inherit !important;
+  }
+}

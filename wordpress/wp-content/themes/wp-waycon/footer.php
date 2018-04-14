@@ -54,6 +54,8 @@
   <script src="<?php echo get_template_directory_uri(); ?>/js/nivoslider.js" type="text/javascript"></script>
   <script src="<?php echo get_template_directory_uri(); ?>/js/mobile.js" type="text/javascript"></script>
   <script src="<?php echo get_template_directory_uri(); ?>/js/gallery.js" type="text/javascript"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCZF31krTQH_5QnEpdIsEgmsBV-Iy884rE"></script>
   <script src="<?php echo get_template_directory_uri(); ?>/js/scripts.js" type="text/javascript"></script>
+
 </body>
 </html>
