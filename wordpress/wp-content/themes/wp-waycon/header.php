@@ -25,7 +25,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
 
 </head>
-<?php if ( is_front_page() && is_home() ){
+<?php if ( is_front_page() || is_home() || is_page('97') ){
   echo '<body id="var3">';
 } else {
   echo '<body id="var1">';

@@ -7,7 +7,7 @@
     <div class="ce">
       <div class="ce0">
         <div class="csc-header">
-          <h5><a href="/products/">Продукция</a></h5></div>
+          <h5><a href="/products.htm">Продукция</a></h5></div>
           <?php $categories = get_terms('c', 'hide_empty=1'); ?>
           <ul class="csc-menu csc-menu-3">
             <?php foreach( $categories as $category ) : ?>
