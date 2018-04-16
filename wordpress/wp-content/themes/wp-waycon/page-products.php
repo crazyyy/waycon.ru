@@ -36,15 +36,7 @@
             }
           ?>
 
-
-
-
-
-
-
-
-
-        <div class="csc cea7  spbottom05 w33 <?php echo $class; ?>">
+            <div class="csc cea7  spbottom05 w33 <?php echo $class; ?>">
               <div class="csc-textpic csc-textpic-center csc-textpic-above">
                 <div class="csc-textpic-imagewrap" style="width:100%;" data-csc-images="1" data-csc-cols="1">
                   <div class="csc-textpic-imagerow">
@@ -72,18 +64,10 @@
             }
           ?>
 
-
         <?php $i++; endforeach ?>
-
-
-
-
 
           </div>
         </div>
-
-
-
 
       </div>
     </div>
