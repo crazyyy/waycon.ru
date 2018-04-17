@@ -53,11 +53,10 @@
                     <div class="csc-textpic-text" style="width:100%;">
                       <a rel="nofollow" class="feature-img" href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
                         <?php if ( has_post_thumbnail()) { ?>
-                          <img src="<?php echo the_post_thumbnail_url('medium'); ?>" title="<?php the_title(); ?>" alt="<?php the_title(); ?>" />
+                          <img src="<?php echo the_post_thumbnail_url('full'); ?>" title="<?php the_title(); ?>" alt="<?php the_title(); ?>" />
                         <?php } ?>
                       </a><!-- /post thumbnail -->
                       <?php the_content(); ?>
-
                       <?php include(TEMPLATEPATH.'/include-table.php'); ?>
 
                       <?php edit_post_link(); ?>
