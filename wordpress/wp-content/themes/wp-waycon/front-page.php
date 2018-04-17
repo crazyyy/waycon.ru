@@ -1,9 +1,14 @@
 <?php /* Template Name: Home Page */ get_header(); ?>
-
+  <style type="text/css">
+    body {
+      background: url(<?php echo get_template_directory_uri(); ?>/img/hintbi.jpg) no-repeat center top / cover;
+      background-attachment: fixed;
+    }
+  </style>
   <div id="inhalt">
     <div id="oben">
 
-      <div id="c781" class="csc cea7  style1 op1 wvp">
+      <div class="csc cea7  style1 op1 wvp">
         <div class="ce">
           <div class="ce0">
             <?php $images = get_field('gallery'); if( $images ): ?>
@@ -26,8 +31,7 @@
         </div>
       </div>
 
-
-      <div id="c2210" class="csc cea7  style2 op1 headerbar">
+      <div class="csc cea7  style2 op1 headerbar">
         <div class="ce">
           <div class="ce0">
             <h1 class="color5 align-center">Точная технология датчика для измерения положения и расстояния</h1></div>
@@ -45,7 +49,7 @@
                 $class = 'posright';
               }
             ?>
-            <div id="c2907" class="csc cea7  w33 <?php echo $class; ?>">
+            <div class="csc cea7  w33 <?php echo $class; ?>">
               <div class="csc-textpic csc-textpic-center csc-textpic-above">
                 <div class="csc-textpic-imagewrap" style="width:100%;" data-csc-images="1" data-csc-cols="1">
                   <div class="csc-textpic-imagerow">
@@ -71,7 +75,7 @@
       </div>
 
 
-      <div id="c2216" class="csc cea7  style1 op1 gap50 fxhoverspotlight tabletnofloat">
+      <div class="csc cea7  style1 op1 gap50 fxhoverspotlight tabletnofloat">
         <div class="ce shortcut">
           <div id="c2910" class="csc cea7">
             <div class="ce">
@@ -111,7 +115,7 @@
       </div>
 
 
-      <div id="c2218" class="csc cea7  style2 op05">
+      <div class="csc cea7  style2 op05">
         <div class="ce shortcut">
           <div id="c2912" class="csc cea7  w25 posleft">
             <div class="align-center">
@@ -145,7 +149,7 @@
       </div>
 
 
-      <div id="c549" class="csc cea7  style1 op1">
+      <div class="csc cea7  style1 op1">
         <div class="ce">
           <div class="ce0">
             <div class="csc-header csc-header-n6">
@@ -183,7 +187,7 @@
       </div>
 
 
-      <div id="c2212" class="csc cea7  style3 op1">
+      <div class="csc cea7  style3 op1">
         <div class="ce shortcut">
           <div id="c2916" class="csc cea7">
             <div class="ce">
@@ -212,7 +216,7 @@
         </div>
       </div>
 
-      <div id="c2234" class="csc cea7  style1 op1">
+      <div class="csc cea7  style1 op1">
         <div class="ce">
           <div class="ce0">
             <div class="csc-header csc-header-n8">

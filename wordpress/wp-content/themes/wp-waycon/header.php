@@ -23,9 +23,9 @@
   <link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/css/print.css" media="print">
   <link href="https://fonts.googleapis.com/css?family=Ubuntu:300,300i,400,400i,500,500i,700,700i&amp;subset=cyrillic,cyrillic-ext" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
-  <?php if ( is_front_page() || is_home() || is_page('97') ){ ?>
-    <link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/css/home.css" media="all">
-  <?php } ?>
+
+  <link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/css/home.css" media="all">
+
 
 </head>
 <?php if ( is_front_page() || is_home() || is_page('97') ){
