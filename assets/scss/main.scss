@@ -2697,13 +2697,17 @@ a.schild:visited {
 
 .zweispaltig,
 .dreispaltig {
-  -webkit-column-gap: 60px;
-     -moz-column-gap: 60px;
-          column-gap: 60px;
+  column-gap: 60px;
 }
 
 .csc-firstHeader {
   margin-top: 0;
+  padding: 18px 0;
+
+  text-align: center;
+
+  color: #ffffff;
+  background: #6b6a6b;
 }
 
 .csc-menu-4 dd {
