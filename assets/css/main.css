@@ -7275,4 +7275,8 @@ a.buttonlook,
   max-width: inherit !important;
 }
 
+.csc-textpic-imagerow-mb .csc-textpic-image {
+  margin-bottom: 30px;
+}
+
 /*# sourceMappingURL=maps/main.css.map */
