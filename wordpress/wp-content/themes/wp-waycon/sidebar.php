@@ -1,7 +1,13 @@
 <div id="links">
-  <div class="ebene1"><a href="/company.htm">Компания</a></div>
 
-  <?php wpeSideNav(); ?>
+  <?php if ( is_active_sidebar('widgetarea1') ) : ?>
+    <?php dynamic_sidebar( 'widgetarea1' ); ?>
+  <?php else : ?>
+
+    <!-- If you want display static widget content - write code here
+    RU: Здесь код вывода того, что необходимо для статического контента виджетов -->
+
+  <?php endif; ?>
 
   <div class="csc cea7 boxleft">
     <div class="ce">
@@ -21,8 +27,5 @@
       </div>
     </div>
   </div>
-
-
-
 
 </div>

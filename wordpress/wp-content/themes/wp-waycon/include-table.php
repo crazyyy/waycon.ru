@@ -123,13 +123,14 @@
       <tr>
         <th scope="row">Скачать</th>
         <td class="downloadrow">
-          <?php if( have_rows('download') ): while ( have_rows('download') ) : the_row(); ?>
+          <?php  $i = 0; if( have_rows('download') ): while ( have_rows('download') ) : the_row(); ?>
             <?php
               $attachment_id = get_sub_field('file');
               $url = wp_get_attachment_url( $attachment_id );
+               if ($i==0) { $delim = ''; } else { $delim = '| ';}
             ?>
-            <a href="<?php echo $url; ?>" title="<?php echo $title; ?>" target="_blank"><?php the_sub_field('title') ?></a>
-          <?php endwhile; endif; ?>
+            <?php echo $delim; ?><a href="<?php echo $url; ?>" title="<?php echo $title; ?>" target="_blank"><?php the_sub_field('title') ?></a>
+          <?php $i++; endwhile; endif; ?>
         </td>
       </tr>
     </tbody>

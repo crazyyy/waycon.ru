@@ -196,12 +196,35 @@ function wpeSideNav() {
     )
   );
 }
+function wpeSideNav2() {
+  wp_nav_menu(
+  array(
+    'theme_location'  => 'sidebar-menu-2',
+    'menu'            => '',
+    'container'       => 'div',
+    'container_class' => 'menu-{menu slug}-container',
+    'container_id'    => '',
+    'menu_class'      => 'menu',
+    'menu_id'         => '',
+    'echo'            => true,
+    'fallback_cb'     => 'wp_page_menu',
+    'before'          => '',
+    'after'           => '',
+    'link_before'     => '',
+    'link_after'      => '',
+    'items_wrap'      => '<ul id="menuehoch">%3$s</ul>',
+    'depth'           => 0,
+    'walker'          => ''
+    )
+  );
+}
 //  Register WPE Navigation
 add_action('init', 'register_html5_menu'); // Add HTML5 Blank Menu
 function register_html5_menu() {
   register_nav_menus(array(
     'header-menu' => __('Меню в шапке', 'wpeasy'),
     'sidebar-menu' => __('Меню в сайдбар', 'wpeasy'),
+    'sidebar-menu-2' => __('Меню в сайдбар 2', 'wpeasy'),
     'footer-menu' => __('Меню в подвал', 'wpeasy'),
     'footer-menu-2' => __('Меню в подвал 2', 'wpeasy')
   ));
@@ -213,23 +236,22 @@ if (function_exists('register_sidebar')) {
     'name' => __('Блок виджетов #1', 'wpeasy'),
     'description' => __('Description for this widget-area...', 'wpeasy'),
     'id' => 'widgetarea1',
-    'before_widget' => '<div id="%1$s" class="widget %2$s">',
-    'after_widget' => '</div>',
-    'before_title' => '<h6>',
-    'after_title' => '</h6>'
+    'before_widget' => '<div id="%1$s" class="%2$s csc cea7 boxleft"><div class="ce"><div class="ce0">',
+    'after_widget' => '</div></div></div>',
+    'before_title' => '<div class="csc-header"><h5>',
+    'after_title' => '</h5></div>'
   ));
   //  Define Sidebar Widget Area 2. If your want to display more widget - uncoment this
-  /*
+
   register_sidebar(array(
     'name' => __('Блок виджетов #2', 'wpeasy'),
     'description' => __('Description for this widget-area...', 'wpeasy'),
     'id' => 'widgetarea2',
-    'before_widget' => '<div id="%1$s" class="widget %2$s">',
-    'after_widget' => '</div>',
-    'before_title' => '<h6>',
-    'after_title' => '</h6>'
+    'before_widget' => '<div id="%1$s" class="%2$s csc cea7 boxleft"><div class="ce"><div class="ce0">',
+    'after_widget' => '</div></div></div>',
+    'before_title' => '<div class="csc-header"><h5>',
+    'after_title' => '</h5></div>'
   ));
-  */
 }
 
 //  Custom Excerpts

@@ -68,9 +68,9 @@
 
           <?php endwhile; ?>
 
-        <?php wp_reset_postdata(); } ?>
+          <?php wp_reset_postdata(); } ?>
 
-          <?php get_sidebar(); ?>
+          <?php get_sidebar('products'); ?>
         </div>
       </div><!-- spalten -->
 

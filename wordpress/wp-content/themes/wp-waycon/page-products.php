@@ -42,7 +42,7 @@
                   <div class="csc-textpic-imagerow">
                     <?php $image = get_field('products_page_image', $category); if( $image ) { ?>
                       <figure class="csc-textpic-image">
-                        <a href="/c/<?php echo get_term_link( $category->slug, 'c' ); ?>" title="<?php echo $category->name; ?>">
+                        <a href="<?php echo get_term_link( $category->slug, 'c' ); ?>" title="<?php echo $category->name; ?>">
                           <img src="<?php echo $image['url']; ?>" alt="<?php echo $category->name; ?>" title="<?php echo $category->name; ?>">
                         </a>
                       </figure>
@@ -50,7 +50,7 @@
                   </div>
                 </div>
                 <div class="csc-textpic-text" style="width:100%;">
-                  <h2 class="riesig"><a href="/c/<?php echo get_term_link( $category->slug, 'c' ); ?>"><?php echo $category->name; ?></a></h2>
+                  <h2 class="riesig"><a href="<?php echo get_term_link( $category->slug, 'c' ); ?>"><?php echo $category->name; ?></a></h2>
                   <?php if( have_rows('benefits', $category) ): echo '<ul>'; while ( have_rows('benefits', $category) ) : the_row(); ?>
                     <li><?php the_sub_field('item'); ?></li>
                   <?php endwhile; echo '</ul>'; endif; ?>
