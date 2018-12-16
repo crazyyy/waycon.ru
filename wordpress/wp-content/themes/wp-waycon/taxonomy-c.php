@@ -32,10 +32,9 @@
 
         //* The Loop
         if ( $exec_query->have_posts() ) { ?>
-        <?php while ( $exec_query->have_posts() ): $exec_query->the_post(); ?>
+
 
           <div id="normal">
-
             <?php $descr = term_description( $term_id, $taxonomy ); if ($descr) { ?>
               <div class="ce">
                 <div class="ce0">
@@ -47,6 +46,7 @@
               </div>
             <?php } ?>
 
+            <?php while ( $exec_query->have_posts() ): $exec_query->the_post(); ?>
             <div id="post-<?php the_ID(); ?>" class="csc cea7 boxsingle style1 op1 spbottom0 saitobaza-box">
               <div class="ce">
                 <div class="ce0">
@@ -64,9 +64,9 @@
                   </div>
                 </div>
               </div>
-            </div>
 
-          <?php endwhile; ?>
+              <?php endwhile; ?>
+            </div>
 
           <?php wp_reset_postdata(); } ?>
 
